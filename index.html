@@ -3,404 +3,381 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>야채 계란빵</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-font-family:'Noto Sans KR', sans-serif;
-background:#fffdf4;
-color:#222;
+  margin:0;
+  font-family:'Noto Sans KR', Arial, sans-serif;
+  background:#fffdf6;
+  color:#2b1b10;
 }
 
 .page{
-max-width:680px;
-margin:0 auto;
-padding:12px 16px 40px;
+  max-width:680px;
+  margin:0 auto;
+  padding:18px 18px 40px;
 }
-
-/* 쿠팡공지 */
 
 .notice{
-text-align:center;
-font-size:11px;
-color:#aaaaaa;
-margin-bottom:18px;
+  text-align:center;
+  font-size:11px;
+  color:#999;
+  font-weight:400;
+  margin-bottom:22px;
 }
 
-/* 제목 */
-
 .hero{
-text-align:center;
-margin-bottom:16px;
+  text-align:center;
 }
 
 .hero h1{
-font-family:'Jua', sans-serif;
-font-size:56px;
-font-weight:400;
-color:#4a280d;
-line-height:1.1;
+  margin:0;
+  font-size:46px;
+  font-weight:900;
+  color:#4a2508;
+  letter-spacing:-2px;
 }
 
 .hero p{
-margin-top:8px;
-font-size:18px;
-font-weight:600;
-line-height:1.5;
+  margin:12px 0 10px;
+  font-size:19px;
+  line-height:1.5;
+  color:#3b2618;
 }
 
-.hero-heart{
-margin-top:6px;
-color:#f5a623;
+.heart{
+  color:#f59e0b;
+  font-size:18px;
+  margin-bottom:18px;
 }
 
-/* 메인 이미지 */
-
-.main-image{
-width:92%;
-display:block;
-margin:16px auto;
-border-radius:18px;
+.main-img{
+  width:100%;
+  display:block;
+  border-radius:18px;
+  margin:0 auto 18px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
-
-/* 카드 */
 
 .card{
-width:92%;
-margin:0 auto 16px;
-background:#fff;
-border:1px solid #ffdca8;
-border-radius:20px;
-padding:24px;
+  background:#fff;
+  border:1.5px solid #ffdca8;
+  border-radius:18px;
+  padding:24px 26px;
+  margin-bottom:14px;
 }
 
-.card-title{
-font-family:'Jua', sans-serif;
-font-size:28px;
-color:#ff8a00;
-margin-bottom:18px;
+.card h2{
+  margin:0 0 18px;
+  color:#ff8a00;
+  font-size:23px;
+  font-weight:900;
 }
-
-/* 재료 */
 
 .ingredients{
-display:grid;
-grid-template-columns:1fr 1fr;
-column-gap:70px;
-row-gap:6px;
-list-style:none;
-padding:0;
-margin:0;
-}
-
-.ingredients li{
-font-size:16px;
-font-weight:500;
-line-height:1.6;
-padding:0;
-border:none;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 24px;
+  padding:0;
+  margin:0;
+  list-style:none;
+  font-size:17px;
+  line-height:1.6;
 }
 
 .ingredients li::before{
-content:"•";
-color:#f59e0b;
-font-size:28px;
-margin-right:12px;
-vertical-align:middle;
+  content:"●";
+  color:#ff9f0a;
+  font-size:12px;
+  margin-right:8px;
 }
 
-/* 비밀재료 */
-
-.secret-card{
-background:#fff4df;
-text-align:center;
+.secret{
+  background:#fff5e4;
+  display:flex;
+  align-items:center;
+  gap:24px;
 }
 
 .lock{
-font-size:42px;
-margin-bottom:10px;
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  background:#fff0d1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:48px;
+  flex-shrink:0;
 }
 
-.secret-title{
-font-family:'Jua', sans-serif;
-font-size:26px;
-margin-bottom:10px;
-color:#3a2412;
+.secret-text{
+  flex:1;
 }
 
-.secret-desc{
-font-size:14px;
-color:#666;
-margin-bottom:18px;
+.secret h2{
+  color:#3b2618;
+  margin-bottom:8px;
+}
+
+.secret p{
+  margin:0 0 16px;
+  font-size:15px;
+  color:#5f4631;
 }
 
 .secret-btn{
-display:block;
-background:#ff7a00;
-color:white;
-text-decoration:none;
-font-weight:700;
-font-size:18px;
-padding:16px;
-border-radius:12px;
+  display:block;
+  width:100%;
+  text-align:center;
+  background:#ff7a00;
+  color:#fff;
+  text-decoration:none;
+  font-size:19px;
+  font-weight:900;
+  padding:17px 20px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(255,122,0,0.35);
 }
 
-/* 만드는 방법 */
-
-.step{
-display:flex;
-gap:12px;
-padding:14px 0;
-border-bottom:1px solid #f1f1f1;
+.steps{
+  margin:0;
+  padding:0;
+  list-style:none;
 }
 
-.step:last-child{
-border-bottom:none;
+.steps li{
+  display:grid;
+  grid-template-columns:86px 1fr;
+  gap:14px;
+  align-items:start;
+  border-bottom:1px solid #ffe1b5;
+  padding:11px 0;
+  font-size:16px;
+  line-height:1.6;
 }
 
-.step-badge{
-background:#ff9800;
-color:white;
-font-size:12px;
-font-weight:700;
-padding:6px 10px;
-border-radius:8px;
-height:fit-content;
+.steps li:last-child{
+  border-bottom:0;
 }
 
-.step-text{
-font-size:15px;
-line-height:1.7;
+.badge{
+  background:#ff9f0a;
+  color:#fff;
+  font-weight:900;
+  font-size:13px;
+  padding:6px 12px;
+  border-radius:8px;
+  text-align:center;
 }
 
-/* 팁 */
-
-.tip-list{
-padding-left:20px;
-line-height:1.9;
-font-size:15px;
+.tips ul{
+  margin:0;
+  padding-left:18px;
+  font-size:15px;
+  line-height:1.8;
 }
-
-/* 공유 */
 
 .share{
-text-align:center;
+  text-align:center;
+}
+
+.share h2{
+  color:#3b2618;
+  margin-bottom:6px;
 }
 
 .share p{
-font-size:14px;
-color:#777;
-margin-bottom:16px;
+  margin:0 0 14px;
+  font-size:14px;
+  color:#666;
 }
 
 .share-buttons{
-display:flex;
-gap:10px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
 .share-buttons button{
-flex:1;
-padding:14px;
-border:none;
-border-radius:10px;
-font-weight:700;
-cursor:pointer;
+  border:0;
+  border-radius:10px;
+  padding:15px 10px;
+  font-size:16px;
+  font-weight:900;
+  cursor:pointer;
 }
 
 .kakao{
-background:#ffe100;
+  background:#ffe100;
+  color:#2b1b10;
 }
 
 .copy{
-background:#f2f2f2;
+  background:#fff;
+  color:#2b1b10;
+  border:1.5px solid #e5d6c4 !important;
 }
 
 .footer{
-text-align:center;
-margin-top:16px;
-font-size:13px;
-color:#d6941f;
+  text-align:center;
+  font-size:13px;
+  color:#d48a17;
+  margin-top:16px;
 }
 
-@media(max-width:480px){
+@media(max-width:520px){
+  .page{
+    padding:14px 14px 34px;
+  }
 
-.hero h1{
-font-size:48px;
-}
+  .hero h1{
+    font-size:38px;
+  }
 
-.card,
-.main-image{
-width:100%;
-}
+  .hero p{
+    font-size:16px;
+  }
 
-.ingredients{
-grid-template-columns:1fr 1fr;
-column-gap:20px;
-row-gap:14px;
-}
+  .ingredients{
+    grid-template-columns:1fr;
+    font-size:16px;
+  }
 
-.ingredients li{
-font-size:14px;
-white-space:nowrap;
-}
+  .secret{
+    flex-direction:column;
+    text-align:center;
+    gap:14px;
+  }
 
-.ingredients li::before{
-font-size:20px;
-margin-right:6px;
-}
-.share-buttons{
-flex-direction:column;
-}
+  .lock{
+    width:76px;
+    height:76px;
+    font-size:38px;
+  }
 
-}
+  .steps li{
+    grid-template-columns:74px 1fr;
+    font-size:15px;
+  }
 
+  .share-buttons{
+    grid-template-columns:1fr;
+  }
+}
 </style>
 </head>
 
 <body>
-
 <div class="page">
 
-<div class="notice">
-쿠팡 파트너스 활동의 일환으로 일정 수수료를 제공받을 수 있습니다.
-</div>
+  <div class="notice">
+    쿠팡 파트너스 활동의 일환으로 일정 수수료를 제공받을 수 있습니다.
+  </div>
 
-<div class="hero">
-<h1>야채 계란빵</h1>
-<p>
-밀가루 없이 만드는<br>
-든든한 아침 한 끼 레시피
-</p>
-<div class="hero-heart">♥</div>
-</div>
+  <section class="hero">
+    <h1>야채 계란빵</h1>
+    <p>밀가루 없이 만드는 든든한 아침 한 끼 레시피</p>
+    <div class="heart">♥</div>
+  </section>
 
-<img src="ChatGPT Image 2026년 6월 19일 오후 04_58_48.png" class="main-image">
+  <img src="egg-bread.jpg" alt="야채 계란빵 완성 사진" class="main-img">
 
-<div class="card">
+  <section class="card">
+    <h2>🥕 준비재료</h2>
+    <ul class="ingredients">
+      <li>계란 4개</li>
+      <li>우유 100ml</li>
+      <li>비밀재료 80g</li>
+      <li>베이킹파우더 4g</li>
+      <li>소금 한 꼬집</li>
+      <li>다진 당근 30g</li>
+      <li>다진 브로콜리 30g</li>
+      <li>다진 양파 30g</li>
+    </ul>
+  </section>
 
-<div class="card-title">
-🥕 준비재료
-</div>
+  <section class="card secret">
+    <div class="lock">🔒</div>
+    <div class="secret-text">
+      <h2>이 레시피의 핵심재료</h2>
+      <p>폭신한 식감의 비결이 되는 재료예요.</p>
+      <a href="여기에-쿠팡링크-넣기" target="_blank" class="secret-btn">
+        🔒 비밀재료 확인하기 ›
+      </a>
+    </div>
+  </section>
 
-<ul class="ingredients">
-<li>계란 4개</li>
-<li>우유 100ml</li>
-<li>비밀재료 80g</li>
-<li>베이킹파우더 4g</li>
-<li>소금 한 꼬집</li>
-<li>다진 당근 30g</li>
-<li>다진 브로콜리 30g</li>
-<li>다진 양파 30g</li>
-</ul>
+  <section class="card">
+    <h2>🍳 만드는 방법</h2>
+    <ul class="steps">
+      <li>
+        <span class="badge">STEP 1</span>
+        <span>볼에 계란 4개를 풀어주세요.</span>
+      </li>
+      <li>
+        <span class="badge">STEP 2</span>
+        <span>우유 100ml와 비밀재료 80g을 넣고 잘 섞어주세요.</span>
+      </li>
+      <li>
+        <span class="badge">STEP 3</span>
+        <span>당근, 양파, 브로콜리를 다져 넣고 베이킹파우더와 소금 한 꼬집을 넣어 한 번 더 섞어주세요.</span>
+      </li>
+      <li>
+        <span class="badge">STEP 4</span>
+        <span>약불로 예열한 팬에 반죽을 올린 뒤 뚜껑을 덮어 천천히 익혀주세요.</span>
+      </li>
+      <li>
+        <span class="badge">STEP 5</span>
+        <span>앞뒤로 노릇하게 익으면 완성!</span>
+      </li>
+    </ul>
+  </section>
 
-</div>
+  <section class="card tips">
+    <h2>💡 맛있게 만드는 팁</h2>
+    <ul>
+      <li>야채는 최대한 잘게 다져야 부담 없이 먹을 수 있어요.</li>
+      <li>약불에서 천천히 익혀야 속까지 촉촉하고 부드러워요.</li>
+      <li>남은 계란빵은 냉장 보관 후 전자레인지나 에어프라이어로 데워 드세요.</li>
+    </ul>
+  </section>
 
-<div class="card secret-card">
+  <section class="card share">
+    <h2>👍 레시피 공유하기</h2>
+    <p>도움이 되셨다면 이 레시피를 공유해보세요!</p>
 
-<div class="lock">🔒</div>
+    <div class="share-buttons">
+      <button class="kakao" onclick="sharePage()">💬 카카오톡 공유</button>
+      <button class="copy" onclick="copyLink()">🔗 링크 복사</button>
+    </div>
+  </section>
 
-<div class="secret-title">
-이 레시피의 핵심재료
-</div>
-
-<div class="secret-desc">
-폭신한 식감의 비결이 되는 재료예요
-</div>
-
-<a href="여기에-쿠팡링크" class="secret-btn" target="_blank">
-비밀재료 확인하기
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="card-title">
-🍳 만드는 방법
-</div>
-
-<div class="step">
-<div class="step-badge">STEP 1</div>
-<div class="step-text">
-볼에 계란 4개를 풀어주세요.
-</div>
-</div>
-
-<div class="step">
-<div class="step-badge">STEP 2</div>
-<div class="step-text">
-우유 100ml와 비밀재료 80g을 넣고 잘 섞어주세요.
-</div>
-</div>
-
-<div class="step">
-<div class="step-badge">STEP 3</div>
-<div class="step-text">
-당근, 양파, 브로콜리를 다져 넣고
-  베이킹파우더와 소금 한 꼬집을 넣어 한 번 더 섞어주세요.
-</div>
-</div>
-
-<div class="step">
-<div class="step-badge">STEP 4</div>
-<div class="step-text">
-약불로 예열한 팬에 반죽을 올린 뒤 뚜껑을 덮어 천천히 익혀주세요.
-</div>
-</div>
-
-<div class="step">
-<div class="step-badge">STEP 5</div>
-<div class="step-text">
-앞뒤로 노릇하게 익으면 완성!
-</div>
-</div>
+  <div class="footer">♥ 오늘도 맛있는 하루 되세요!</div>
 
 </div>
 
-<div class="card">
+<script>
+function sharePage(){
+  if(navigator.share){
+    navigator.share({
+      title:'야채 계란빵 레시피',
+      text:'밀가루 없이 만드는 야채 계란빵 레시피',
+      url:window.location.href
+    });
+  }else{
+    copyLink();
+  }
+}
 
-<div class="card-title">
-💡 맛있게 만드는 팁
-</div>
-
-<ul class="tip-list">
-<li>야채는 최대한 잘게 다져주세요.</li>
-<li>약불에서 천천히 익혀야 촉촉해요.</li>
-<li>냉장보관 후 다시 데워 먹어도 맛있어요.</li>
-</ul>
-
-</div>
-
-<div class="card share">
-
-<div class="card-title">
-👍 레시피 공유하기
-</div>
-
-<p>도움이 되셨다면 공유해보세요.</p>
-
-<div class="share-buttons">
-<button class="kakao">💬 카카오톡 공유</button>
-<button class="copy">🔗 링크 복사</button>
-</div>
-
-</div>
-
-<div class="footer">
-♥ 오늘도 맛있는 하루 되세요!
-</div>
-
-</div>
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href);
+  alert('링크가 복사되었습니다!');
+}
+</script>
 
 </body>
 </html>
